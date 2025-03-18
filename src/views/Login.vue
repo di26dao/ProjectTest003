@@ -25,7 +25,7 @@ const form = ref({
 
 const login = async () => {
   try {
-    const response = await axios.post('https://test0030317-dyg3fmaacveddgda.canadacentral-01.azurewebsites.net/api/Auth/login', form.value);
+    const response = await axios.post('https://test003-houduan-dqf0cwgsged2enfv.canadacentral-01.azurewebsites.net/api/Auth/login', form.value);
     
     localStorage.setItem('token', response.data.Token);
     localStorage.setItem('roleName', response.data.roleName); // 存储角色名
