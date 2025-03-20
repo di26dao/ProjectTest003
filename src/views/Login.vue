@@ -36,7 +36,6 @@ const login = async () => {
       password: password.value
     };
     const response = await axios.post('https://test003-houduan-dqf0cwgsged2enfv.canadacentral-01.azurewebsites.net/api/Auth/login', formData);
-
     localStorage.setItem('token', response.data.Token);
     localStorage.setItem('roleName', response.data.roleName); // 存储角色名
     console.log('Login successful', response.data);
