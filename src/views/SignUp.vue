@@ -43,8 +43,8 @@
         password: password.value,
         
       };
-      //const response = await axios.post('https://test003-houduan-dqf0cwgsged2enfv.canadacentral-01.azurewebsites.net/api/Auth/SignUp', formData);
-      const response = await axios.post('http://localhost:5117/api/Auth/SignUp', formData);
+      const response = await axios.post('https://test003-houduan-dqf0cwgsged2enfv.canadacentral-01.azurewebsites.net/api/Auth/SignUp', formData);
+      //const response = await axios.post('http://localhost:5117/api/Auth/SignUp', formData);
     } catch (error) {
       console.error('SignUp failed', error);
     }
