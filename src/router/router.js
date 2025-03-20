@@ -8,12 +8,17 @@ import Page3 from '../views/Page3.vue';
 import Page4 from '../views/Page4.vue';
 import Page5 from '../views/Page5.vue';
 import Page6 from '../views/Page6.vue';
-
+import SignUp from '../views/SignUp.vue';
 const routes = [
   {
     path: '/',
     name: 'Login',
     component: Login
+  },
+  {
+    path: '/SignUp',
+    name: 'SignUp',
+    component: SignUp
   },
   {
     path: '/dashboard',
@@ -51,6 +56,7 @@ const routes = [
         name: 'Page6',
         component: Page6
       }
+      
     ]
   }
 ];
