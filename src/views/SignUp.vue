@@ -10,12 +10,9 @@
           <label for="password" style="display: block; margin-bottom: 5px;">Password:</label>
           <input type="password" id="password" v-model="password" required style="width: 100%; padding: 8px; box-sizing: border-box;">
         </div>
+       
         <div style="margin-bottom: 20px;">
-          <label for="repassword" style="display: block; margin-bottom: 5px;">Repassword:</label>
-          <input type="password" id="Repassword" v-model="repassword" required style="width: 100%; padding: 8px; box-sizing: border-box;">
-        </div>
-        <div style="margin-bottom: 20px;">
-          <label for="phone" style="display: block; margin-bottom: 5px;">Repassword:</label>
+          <label for="phone" style="display: block; margin-bottom: 5px;">Phone:</label>
           <input type="text" id="phone" v-model="phone" required style="width: 100%; padding: 8px; box-sizing: border-box;">
         </div>
         <div style="margin-bottom: 10px;">
@@ -36,7 +33,7 @@
   const router = useRouter();
   const username = ref('');
   const password = ref('');
-  const repassword = ref('');
+ 
   const phone = ref('');
   const SignUp = async () => {
     try {
@@ -44,12 +41,8 @@
         phone: username.value,
         username: username.value,
         password: password.value,
-        repassword:repassword.value
+        
       };
-      if(password.value!=repassword.value){
-        window.alert("两次密码输入不一致");
-        return;
-      }
       const response = await axios.post('https://test003-houduan-dqf0cwgsged2enfv.canadacentral-01.azurewebsites.net/api/Auth/SignUp', formData);
     } catch (error) {
       console.error('SignUp failed', error);
